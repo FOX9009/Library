@@ -1,0 +1,34 @@
+﻿@using Library.Models
+@using Library.ViewModels
+@model IndexViewModel
+
+@{
+    ViewData["Title"] = "Home Page";
+}
+
+
+<h2>Книжные полки</h2>
+<form>
+    <label>Выберите пользователя:</label>
+    <select name="userID">
+        @foreach (UserModel user in Model.Users)
+        {
+            <option value="@user.id">@user.Name</option>
+        }
+    </select>
+    <input type="submit" />
+</form>
+<br />
+<table class="table">
+    <tr>
+        <th>Название</th>
+        <th>Автор</th>
+    </tr>
+    @foreach (Book b in Model.Books)
+    {
+        <tr>
+            <td>@b.Title</td>
+            <td>@b.Autor</td>
+        </tr>
+    }
+</table>

@@ -1,0 +1,12 @@
+﻿@model Library.Models.User
+
+<h2>Редатировать данные пользователя</h2>
+<form asp-action="Edit" asp-controller="User" asp-route-id="@Model.Id">
+    <p>
+        <label asp-for="Name">Имя</label>
+        <input type="text" asp-for="Name" />
+    </p>
+    <p>
+        <input type="submit" value="Отправить" />
+    </p>
+</form>

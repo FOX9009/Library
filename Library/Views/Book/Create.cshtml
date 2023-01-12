@@ -1,0 +1,46 @@
+﻿@model Library.Models.Book
+
+@using Library.Models
+@using Library.ViewModels
+
+<h2>Добавить книгу</h2>
+<form asp-action="create" asp-controller="Book">
+    <p>
+        <label asp-for="Title">Название</label><br />
+        <input type="text" asp-for="Title" />
+    </p>
+    <p>
+        <label asp-for="Autor">Автор</label><br />
+        <input type="text" asp-for="Autor" />
+    </p>
+    <p>
+        <label asp-for="Genre">Жанр</label><br />
+        <input type="text" asp-for="Genre" />
+    </p>
+    <p>
+        <label asp-for="Description">Краткое описание</label><br />
+        <input type="text" asp-for="Description" />
+    </p>
+    <p>
+        <label asp-for="Rating">Рейтинг</label><br />
+        <input type="number" asp-for="Rating" />
+    </p>
+    <p>
+        <label asp-for="IsRead">Прочитана?</label><br />
+        <input type="checkbox" asp-for="IsRead" />
+    </p>
+    <p>
+    <label>Выберите пользователя:</label>
+
+    <select name="userId">
+           @*@foreach (var item in )
+            {
+                <option value="">Тут не могу показать список пользователей для привязки по внешнему ключу</option>
+            }*@
+        </select>
+    <input type="number" asp-for="UserID" />
+    </p>
+    <p>
+        <input type="submit" value="Отправить" />
+    </p>
+</form>

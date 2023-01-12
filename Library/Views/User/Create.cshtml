@@ -1,0 +1,12 @@
+﻿@model Library.Models.User
+
+<h2>Добавить пользователя</h2>
+<form asp-action="Create" asp-controller="User">
+    <p>
+        <label asp-for="Name">Имя пользователя</label>
+        <input type="text" asp-for="Name" />
+    </p>
+    <p>
+        <input type="submit" value="Отправить" />
+    </p>
+</form>
